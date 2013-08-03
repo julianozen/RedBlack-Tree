@@ -1,0 +1,13 @@
+My implementation is pretty straightforward. It follows the peusdo-code for red black trees in the book and the b-tree functions (successor, min, max, etc.) from the handouts fairly rigidly
+
+I decided to make my color as a boolean, to theoretically save storage space and make checking statements less costly. 
+
+FindRange works by looking to the left for the first value, and the calling successor until it reaches the last value in the range. 
+
+Find MostRecent calls a find range on the beginning of time until the the most recent date and then uses the most recent date. This is essentially my implementation for how my skiplist worked.
+
+
+There is specific case which I know my Red Black tree does not work. It has to do with when a leaf is removed, and the invariance is not maintained.
+I have commented in my code, the two specific lines that i know it goes wrong, but i could not figure out how to handle the case without creating an infinite loop, a null pointer exception or missing values.
+
+My current build, does compile correctly, but at this edge case, it still removes 1 branch of leaves. 
